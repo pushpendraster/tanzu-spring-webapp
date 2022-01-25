@@ -2,6 +2,8 @@ package com.example.springboot;
 
 import java.util.Arrays;
 
+import com.example.HelloService;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -35,5 +37,9 @@ public class Application {
     	@Bean
 	public HttpTraceRepository htttpTraceRepository() {
 		return new InMemoryHttpTraceRepository();
+	}
+	@Bean
+	public HelloService helloService(){
+		return new HelloService();
 	}
 }
